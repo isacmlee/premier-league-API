@@ -28,4 +28,4 @@ for tr in tr_teams:
     table_values.append(row_values)
 
 pl_table = pd.DataFrame(data=table_values,columns=col_names)
-pl_table.to_csv("data/pl_table.csv")
+pl_table.to_csv("data/pl_table.csv",index=False)
