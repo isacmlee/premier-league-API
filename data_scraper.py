@@ -1,24 +1,31 @@
 import requests
-from selenium import webdriver 
 from bs4 import BeautifulSoup
+import pandas as pd
 
-# using selenium to grab JS rendered data
-browser = webdriver.Chrome()
-browser.get("https://www.premierleague.com/stats")
-html_source = browser.page_source
-browser.quit()
+# Send HTTP Request 
+URL = "https://fbref.com/en/comps/9/Premier-League-Stats"
+page = requests.get(URL)
 
 # BeautifulSoup parses html_source
-soup = BeautifulSoup(html_source, "html.parser")
+soup = BeautifulSoup(page.text, "html.parser")
 
-results = soup.find(id="mainContent")
-results = results.find("div",class_="hasSideNav")
-results = results.find("div",class_="sidebarPush")
-results = results.find_all("div",class_="col-12")
-stats = results[1].find("section",class_="mainWidget statsRow DashboardPlayerStats")
-stats = stats[0].find("ul",class_="block-list-4 mobileScrollList")
-children = stats.findChildren("li")
-print(children)
+# Scrape PL Table column names 
+th_cols = soup.find_all("thead")[0].find_all("th")
+col_names = []
+for i in th_cols:
+    col_names.append(i.text)
 
+# Scrape PL Table values 
+tr_teams = soup.find_all("tbody")[0].find_all("tr")
 
-# results = soup.find_all("div", class_="")
+# For each team, iterate through the tds
+table_values = []
+for tr in tr_teams: 
+    row_values = []
+    tds = tr.findChildren(recursive=False)
+    for td in tds:
+        row_values.append(td.text)
+    table_values.append(row_values)
+
+pl_table = pd.DataFrame(data=table_values,columns=col_names)
+pl_table.to_csv("data/pl_table.csv")
