@@ -1,21 +1,21 @@
-Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,Pts/MP,xG,xGA,xGD,xGD/90,Last 5,Attendance,Top Team Scorer,Goalkeeper,Notes
-1, Arsenal,29,23,3,3,70,27,+43,72,2.48,57.5,27.8,+29.8,+1.03,W W W W W,"60,205",Martinelli - 13,Aaron Ramsdale,
-2, Manchester City,28,20,4,4,71,26,+45,64,2.29,59.0,21.8,+37.1,+1.33,D W W W W,"53,194",Erling Haaland - 28,Ederson,
-3, Newcastle Utd,28,14,11,3,46,20,+26,53,1.89,48.7,26.3,+22.4,+0.80,L W W W W,"52,243",Miguel Almirón - 11,Nick Pope,
-4, Manchester Utd,28,16,5,7,42,37,+5,53,1.89,42.4,37.0,+5.4,+0.19,W L D L W,"73,718",Marcus Rashford - 15,David de Gea,
-5, Tottenham,29,15,5,9,53,41,+12,50,1.72,42.4,34.7,+7.7,+0.27,W L W D D,"61,654",Harry Kane - 22,Hugo Lloris,
-6, Brighton,27,13,7,7,51,34,+17,46,1.70,49.6,32.2,+17.4,+0.64,W D W D W,"31,460",Alexis Mac Allister - 8,Robert Sánchez,
-7, Aston Villa,29,13,5,11,39,40,-1,44,1.52,37.1,43.4,-6.3,-0.22,W D W W W,"41,634",Ollie Watkins - 11,Emiliano Martínez,
-8, Liverpool,28,12,7,9,48,33,+15,43,1.54,48.1,39.8,+8.3,+0.30,W W L L D,"53,197",Mohamed Salah - 12,Alisson,
-9, Brentford,29,10,13,6,46,38,+8,43,1.48,41.5,38.6,+2.9,+0.10,L W D D L,"17,071",Ivan Toney - 17,David Raya,
-10, Fulham,28,11,6,11,39,39,0,39,1.39,34.5,47.5,-13.1,-0.47,W D L L L,"23,502",Aleksandar Mitrović - 11,Bernd Leno,
-11, Chelsea,29,10,9,10,29,30,-1,39,1.34,37.9,35.6,+2.3,+0.08,W W D L D,"39,988",Kai Havertz - 7,Kepa Arrizabalaga,
-12, Crystal Palace,29,7,9,13,24,39,-15,30,1.03,27.1,39.6,-12.4,-0.43,L L L L W,"24,900",Wilfried Zaha - 6,Vicente Guaita,
-13, Leeds United,29,7,8,14,38,49,-11,29,1.00,36.5,46.4,-9.9,-0.34,L D W L W,"36,513",Rodrigo - 11,Illan Meslier,
-14, Wolves,29,7,7,15,23,42,-19,28,0.97,29.4,41.8,-12.4,-0.43,L W L L D,"31,583",Daniel Podence - 6,José Sá,
-15, West Ham,28,7,6,15,26,39,-13,27,0.96,35.9,35.0,+0.9,+0.03,W L D W L,"62,459","Saïd Benrahma, Jarrod Bowen - 4",Łukasz Fabiański,
-16, Everton,29,6,9,14,23,41,-18,27,0.93,31.5,48.3,-16.8,-0.58,L D W D D,"39,237",Demarai Gray - 4,Jordan Pickford,
-17, Nott'ham Forest,29,6,9,14,24,52,-28,27,0.93,30.3,46.4,-16.1,-0.55,D L L D L,"29,177",Brennan Johnson - 8,Dean Henderson,
-18, Bournemouth,29,7,6,16,27,57,-30,27,0.93,27.8,51.1,-23.3,-0.80,L W L W L,"10,359",Philip Billing - 6,Neto,
-19, Leicester City,29,7,4,18,40,51,-11,25,0.86,34.9,47.1,-12.1,-0.42,L L D L L,"31,795",Harvey Barnes - 10,Danny Ward,
-20, Southampton,29,6,5,18,23,47,-24,23,0.79,28.1,39.8,-11.8,-0.41,W D L D L,"30,469",James Ward-Prowse - 7,Gavin Bazunu,
+Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,Pts/MP,xG,xGA,xGD,xGD/90,Last 5,Attendance,Top Team Scorer,Goalkeeper
+1, Arsenal,30,23,4,3,72,29,+43,73,2.43,58.9,31.6,+27.3,+0.91,W W W W D,"60,205",Martinelli - 14,Aaron Ramsdale
+2, Manchester City,29,21,4,4,75,27,+48,67,2.31,61.9,22.2,+39.7,+1.37,W W W W W,"53,194",Erling Haaland - 30,Ederson
+3, Newcastle Utd,29,15,11,3,48,21,+27,56,1.93,49.9,28.8,+21.1,+0.73,W W W W W,"52,243",Miguel Almirón - 11,Nick Pope
+4, Manchester Utd,29,17,5,7,44,37,+7,56,1.93,45.8,38.0,+7.8,+0.27,L D L W W,"73,704",Marcus Rashford - 15,David de Gea
+5, Tottenham,30,16,5,9,55,42,+13,53,1.77,43.2,36.1,+7.1,+0.24,L W D D W,"57,543",Harry Kane - 23,Hugo Lloris
+6, Aston Villa,30,14,5,11,41,40,+1,47,1.57,38.4,43.7,-5.3,-0.18,D W W W W,"41,664",Ollie Watkins - 12,Emiliano Martínez
+7, Brighton,28,13,7,8,52,36,+16,46,1.64,51.0,33.0,+18.0,+0.64,D W D W L,"31,460",Alexis Mac Allister - 8,Robert Sánchez
+8, Liverpool,29,12,8,9,50,35,+15,44,1.52,52.0,41.2,+10.8,+0.37,W L L D D,"49,397",Mohamed Salah - 13,Alisson
+9, Brentford,30,10,13,7,47,40,+7,43,1.43,44.0,39.8,+4.2,+0.14,W D D L L,"17,073",Ivan Toney - 18,David Raya
+10, Fulham,29,11,6,12,39,40,-1,39,1.34,35.2,48.6,-13.5,-0.46,D L L L L,"23,568",Aleksandar Mitrović - 11,Bernd Leno
+11, Chelsea,30,10,9,11,29,31,-2,39,1.30,39.0,36.2,+2.8,+0.09,W D L D L,"39,988",Kai Havertz - 7,Kepa Arrizabalaga
+12, Crystal Palace,30,8,9,13,29,40,-11,33,1.10,30.2,40.5,-10.3,-0.34,L L L W W,"24,900",Wilfried Zaha - 6,Vicente Guaita
+13, Wolves,30,8,7,15,24,42,-18,31,1.03,30.0,42.9,-13.0,-0.43,W L L D W,"31,585",Daniel Podence - 6,José Sá
+14, West Ham,29,8,6,15,27,39,-12,30,1.03,36.9,35.7,+1.3,+0.04,L D W L W,"62,459","Saïd Benrahma, Jarrod Bowen - 4",Łukasz Fabiański
+15, Bournemouth,30,8,6,16,28,57,-29,30,1.00,29.9,51.8,-22.0,-0.73,W L W L W,"10,359",Philip Billing - 7,Neto
+16, Leeds United,30,7,8,15,39,54,-15,29,0.97,37.5,49.5,-12.0,-0.40,D W L W L,"36,507",Rodrigo - 11,Illan Meslier
+17, Everton,30,6,9,15,23,43,-20,27,0.90,32.5,51.7,-19.2,-0.64,D W D D L,"39,237",Demarai Gray - 4,Jordan Pickford
+18, Nott'ham Forest,30,6,9,15,24,54,-30,27,0.90,30.5,47.7,-17.1,-0.57,L L D L L,"29,177",Brennan Johnson - 8,Dean Henderson
+19, Leicester City,30,7,4,19,40,52,-12,25,0.83,35.6,49.1,-13.5,-0.45,L D L L L,"31,815",Harvey Barnes - 10,Danny Ward
+20, Southampton,30,6,5,19,24,51,-27,23,0.77,28.5,42.7,-14.3,-0.48,D L D L L,"30,502",James Ward-Prowse - 7,Gavin Bazunu
