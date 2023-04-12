@@ -37,7 +37,7 @@ class Team(db.Model):
     def __repre__(self):
         return f"{self.rank} - {self.team}"
 
-# For GET request to http://localhost:5000/
+# GET request for all Teams' ranks
 class GetTeamRank(Resource):
     def get(self):
         teams = Team.query.all()
@@ -47,8 +47,71 @@ class GetTeamRank(Resource):
                         'Rank': team.rank}
             team_list.append(team_data)
         return {"Team Ranks": team_list}, 200
-    
-api.add_resource(GetTeamRank, '/')
+
+# GET request for specific Team's Stats
+class GetTeamStats(Resource):
+    def get(self,squad):
+        team = Team.query.filter_by(squad=squad).first()
+        if team is None:
+            return {"Error": "Not Found"}, 40
+        team_data = {'Squad': team.squad,
+                        'Matches Played': team.mp,
+                        'Wins': team.w,
+                        'Ties': team.d,
+                        'Losses': team.l}
+        return {f"{squad} Match Stats": team_data}, 200
+
+# GET request for Teams' top scorer 
+class GetTeamTopScorer(Resource):
+    def get(self):
+        teams = Team.query.all()
+        team_list = []
+        for team in teams:
+            team_data = {'Squad': team.squad,
+                         'Top Scorer': team.top_team_scorer}
+            team_list.append(team_data)
+        return {"Team Top Scorers": team_list}, 200
+
+# POST request to add new team to database
+class AddTeam(Resource):
+    def post(self):
+        if request.is_json:
+            team = Team(
+                    rank=request.json['rank'],
+                    squad=request.json['squad'],
+                    mp=request.json['mp'],
+                    w=request.json['w'],
+                    d=request.json['d'],
+                    l=request.json['l'],
+                    gf=request.json['gf'],
+                    ga=request.json['ga'],
+                    gd=request.json['gd'],
+                    pts=request.json['pts'],
+                    pts_per_match=request.json['pts_per_match'],
+                    x_goals=request.json['x_goals'],
+                    x_goals_allowed=request.json['x_goals_allowed'],
+                    x_gd=request.json['x_gd'],
+                    x_gd_per_match=request.json['x_gd_per_match'],
+                    last_five=request.json['last_five'],
+                    attendance=request.json['attendance'],
+                    top_team_scorer=request.json['top_team_scorer'],
+                    goalkeeper=request.json['goalkeeper']
+            )
+            db.session.add(team)
+            db.session.commit()
+            # return a json response
+            return make_response(jsonify({'ID': team.id,'Squad':team.squad}), 201)
+        else:
+            return {'Error': 'Request must be JSON'}, 400
+
+
+api.add_resource(GetTeamRank, '/team_rank')
+api.add_resource(GetTeamStats, '/team_stats/<squad>')
+api.add_resource(GetTeamTopScorer, '/team_top_scorer')
+api.add_resource(AddTeam,'/add_team')
+# update
+# delete 
+
 
 if __name__ == '__main__':
     app.run(debug=True)
