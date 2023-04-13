@@ -1,5 +1,5 @@
 # Premier League API
-Basic REST API for Premier League Stats (2022 - 2023 Season) as of 4/12/23. 
+Built Basic REST API for Premier League Stats (2022 - 2023 Season) as of 4/12/23. 
 
 ### GET /team_ranks 
 ``` python
