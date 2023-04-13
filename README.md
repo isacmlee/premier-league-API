@@ -2,7 +2,7 @@
 Basic REST API for Premier League Stats (2022 - 2023 Season) as of 4/12/23. 
 
 ### Endpoints 
-| Sheet Name | Link to CSV   | Description |
+| Endpoint | Body   | Description |
 | ----------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 
 ## Part 1 
