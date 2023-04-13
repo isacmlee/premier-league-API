@@ -29,4 +29,5 @@ for tr in tr_teams:
 
 pl_table = pd.DataFrame(data=table_values,columns=col_names)
 pl_table.drop(columns=['Notes'],inplace=True)
+pl_table['Squad'] = pl_table['Squad'].str.lstrip(" ") # remove whitespace in front of string
 pl_table.to_csv("data/pl_table.csv",index=False)

@@ -104,14 +104,37 @@ class AddTeam(Resource):
         else:
             return {'Error': 'Request must be JSON'}, 400
 
+# PUT request to update Team Name 
+class UpdateTeamName(Resource):
+    def put(self,squad):
+        if request.is_json:
+            team = Team.query.filter_by(squad=squad).first()
+            if team is None:
+                return {'Error': 'Not Found'}, 404 
+            else:
+                team.squad = request.json['squad']
+                db.session.commit()
+                return 'Updated Team Name', 200
+        else:
+            return {'Error': 'Request must be JSON'}, 400
+        
+# DELETE request for delete Team
+class DeleteTeam(Resource):
+    def delete(self,squad):
+        team = Team.query.filter_by(squad=squad).first()
+        if team is None:
+            return {'Error': 'Not Found'}, 404 
+        db.session.delete(team)
+        db.session.commit()
+        return f'{squad} is deleted', 200
 
-api.add_resource(GetTeamRank, '/team_rank')
-api.add_resource(GetTeamStats, '/team_stats/<squad>')
-api.add_resource(GetTeamTopScorer, '/team_top_scorer')
-api.add_resource(AddTeam,'/add_team')
-# update
-# delete 
-
+# Adds resource to API
+api.add_resource(GetTeamRank, '/team_rank') # Get all Team Names and Ranks
+api.add_resource(GetTeamStats, '/team_stats/<squad>') # Get Squad Stats
+api.add_resource(GetTeamTopScorer, '/team_top_scorer') # Get Top Scorer for all Teams
+api.add_resource(AddTeam,'/add_team') # Add new team
+api.add_resource(UpdateTeamName,'/update_team_name/<squad>') # Update Team Name 
+api.add_resource(DeleteTeam,'/delete_team/<squad>')
 
 if __name__ == '__main__':
     app.run(debug=True)
