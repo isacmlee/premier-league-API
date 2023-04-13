@@ -37,7 +37,7 @@ class Team(db.Model):
     def __repre__(self):
         return f"{self.rank} - {self.team}"
 
-# GET request for all Teams' ranks
+# GET request for all Teams' ranks (http://127.0.0.1:5000/team_ranks)
 class GetTeamRank(Resource):
     def get(self):
         teams = Team.query.all()
@@ -48,7 +48,7 @@ class GetTeamRank(Resource):
             team_list.append(team_data)
         return {"Team Ranks": team_list}, 200
 
-# GET request for specific Team's Stats
+# GET request for specific Team's Stats (http://127.0.0.1:5000/team_stats/<squad>)
 class GetTeamStats(Resource):
     def get(self,squad):
         team = Team.query.filter_by(squad=squad).first()
@@ -61,7 +61,7 @@ class GetTeamStats(Resource):
                         'Losses': team.l}
         return {f"{squad} Match Stats": team_data}, 200
 
-# GET request for Teams' top scorer 
+# GET request for Teams' top scorer (http://127.0.0.1:5000/team_top_scorer)
 class GetTeamTopScorer(Resource):
     def get(self):
         teams = Team.query.all()
@@ -72,7 +72,7 @@ class GetTeamTopScorer(Resource):
             team_list.append(team_data)
         return {"Team Top Scorers": team_list}, 200
 
-# POST request to add new team to database
+# POST request to add new team to database (http://127.0.0.1:5000/add_team)
 class AddTeam(Resource):
     def post(self):
         if request.is_json:
@@ -104,7 +104,7 @@ class AddTeam(Resource):
         else:
             return {'Error': 'Request must be JSON'}, 400
 
-# PUT request to update Team Name 
+# PUT request to update Team Name (http://127.0.0.1:5000/update_team_name/<squad>)
 class UpdateTeamName(Resource):
     def put(self,squad):
         if request.is_json:
@@ -118,7 +118,7 @@ class UpdateTeamName(Resource):
         else:
             return {'Error': 'Request must be JSON'}, 400
         
-# DELETE request for delete Team
+# DELETE request for delete Team (http://127.0.0.1:5000/delete_team/<squad>)
 class DeleteTeam(Resource):
     def delete(self,squad):
         team = Team.query.filter_by(squad=squad).first()
@@ -129,7 +129,7 @@ class DeleteTeam(Resource):
         return f'{squad} is deleted', 200
 
 # Adds resource to API
-api.add_resource(GetTeamRank, '/team_rank') # Get all Team Names and Ranks
+api.add_resource(GetTeamRank, '/team_ranks') # Get all Team Names and Ranks
 api.add_resource(GetTeamStats, '/team_stats/<squad>') # Get Squad Stats
 api.add_resource(GetTeamTopScorer, '/team_top_scorer') # Get Top Scorer for all Teams
 api.add_resource(AddTeam,'/add_team') # Add new team
