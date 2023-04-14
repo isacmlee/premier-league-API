@@ -25,10 +25,9 @@ Using BeautifulSoup, I scraped Premier League data from fbref.com. I then added 
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 ```
-
-
-
 <b>Tools Used</b>: <i>Python, BeautifulSoup, Requests, Pandas, Flask, Flask-RESTful, Flask-SQLAlchemy</i>
+
+### Installation
 
 ### Endpoints
 * [GET /team_ranks](#get-team_ranks)
