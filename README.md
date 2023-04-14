@@ -27,7 +27,22 @@ Using BeautifulSoup, I scraped Premier League data from fbref.com. I then added 
 ```
 <b>Tools Used</b>: <i>Python, BeautifulSoup, Requests, Pandas, Flask, Flask-RESTful, Flask-SQLAlchemy</i>
 
-### Installation
+### Installation 
+#### Part 1
+``` bash
+# In desired location
+git clone https://github.com/isacmlee/premier-league-API.git
+
+# Install packages listed in requirements.txt to your virtualenv 
+pip install -r requirements.txt
+```
+#### Part 2
+Run: 
+1. data_scraper.py
+2. create_database.py
+3. app.py
+
+To use, you can either utilize Python's requests package as seen in Endpoints section or download and install [Postman](https://www.postman.com/).
 
 ### Endpoints
 * [GET /team_ranks](#get-team_ranks)
