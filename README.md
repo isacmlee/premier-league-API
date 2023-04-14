@@ -1,6 +1,7 @@
 # Premier League API
 #### Table of Contents
 * [Introduction](#introduction)
+* [Installation](#installation)
 * [Endpoints](#endpoints)  
 
 ### Introduction
@@ -12,8 +13,15 @@ Using BeautifulSoup, I scraped Premier League data from fbref.com. I then added 
 <b>Tools Used</b>: <i>Python, BeautifulSoup, Requests, Pandas, Flask, Flask-RESTful, Flask-SQLAlchemy</i>
 
 ### Endpoints
+* [GET /team_ranks](#get-team_ranks)
+* [GET /team_stats/< squad >](#get-team_stats-squad-)  
+* [GET /team_top_scorer](#get-team_top_scorer)
+* [POST /add_team](#post-add_team)
+* [PUT /update_team_name/< squad >](#put-update_team_name-squad-)
+* [DELETE /delete_team/< squad >](#delete-delete_team-squad-)
+
 #### GET /team_ranks
-Retrieve ranks for all Teams in the Premier League.
+Retrieve ranks for all Teams in the Premier League database.
 ``` python 
 # Request
 requests.get(http://127.0.0.1:5000/team_ranks)
@@ -106,7 +114,7 @@ requests.get(http://127.0.0.1:5000/team_ranks)
 }
 ```
 #### GET /team_stats/< squad >
-Retrieve match stats for specified Team in the Premier League.
+Retrieve match stats for specified Team in the Premier League database.
 ``` python 
 # Request
 requests.get(http://127.0.0.1:5000/team_stats/Liverpool)
@@ -124,7 +132,7 @@ requests.get(http://127.0.0.1:5000/team_stats/Liverpool)
 }
 ```
 #### GET /team_top_scorer
-Retrieve top scorer for all Teams in the Premier League.
+Retrieve top scorer for all Teams in the Premier League database.
 ``` python 
 # Request
 requests.get(http://127.0.0.1:5000/team_top_scorer)
@@ -253,8 +261,8 @@ response = requests.post(URL, json=body)
     "Squad": "Loserpool FC"
 }
 ```
-#### GET /update_team_name/< squad >
-Update Team name for specified Team in the Premier League.
+#### PUT /update_team_name/< squad >
+Update Team name for specified Team in the Premier League database.
 ``` python 
 # Request
 URL = "http://127.0.0.1:5000/update_team_name/Loserpool FC"
@@ -263,7 +271,7 @@ body = {
     "squad": "Winnerpool"
 }
 
-response = requests.post(URL, json=body)
+response = requests.put(URL, json=body)
 ```
 ``` python
 # Response
@@ -277,7 +285,6 @@ requests.delete("http://127.0.0.1:5000/update_team_name/Loserpool FC")
 ```
 ``` python
 # Response
-"Updated Team Name"
 "Loserpool FC is deleted"
 ```
 
