@@ -220,17 +220,65 @@ requests.get(http://127.0.0.1:5000/team_top_scorer)
 Add new Team to the Premier League database. 
 ``` python 
 # Request
-requests.get(http://127.0.0.1:5000/add_team)
+URL = "http://127.0.0.1:5000/add_team"
+
+body = {
+    "rank": 21,
+    "squad": "Loserpool FC",
+    "mp": 25,
+    "w": 17,
+    "d": 3,
+    "l": 5,
+    "gf": 56,
+    "ga": 5,
+    "gd": 51,
+    "pts": 75,
+    "pts_per_match": 45,
+    "x_goals": 3.42,
+    "x_goals_allowed": 0.032,
+    "x_gd": 122,
+    "x_gd_per_match": 34,
+    "last_five": "W W W W W",
+    "attendance": "23,232",
+    "top_team_scorer": "Isac Lee",
+    "goalkeeper": "John Cena"
+}
+ 
+response = requests.post(URL, json=body)
 ```
 ``` python
 # Response
 {
-    "Liverpool Match Stats": {
-        "Squad": "Liverpool",
-        "Matches Played": 29,
-        "Wins": 12,
-        "Ties": 8,
-        "Losses": 9
-    }
+    "ID": 20,
+    "Squad": "Loserpool FC"
 }
 ```
+#### GET /update_team_name/< squad >
+Update Team name for specified Team in the Premier League.
+``` python 
+# Request
+URL = "http://127.0.0.1:5000/update_team_name/Loserpool FC"
+
+body = {
+    "squad": "Winnerpool"
+}
+
+response = requests.post(URL, json=body)
+```
+``` python
+# Response
+"Updated Team Name"
+```
+#### DELETE /delete_team/< squad >
+Delete specified Team in the Premier League database.
+``` python 
+# Request
+requests.delete("http://127.0.0.1:5000/update_team_name/Loserpool FC")
+```
+``` python
+# Response
+"Updated Team Name"
+"Loserpool FC is deleted"
+```
+
+
