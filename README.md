@@ -5,7 +5,7 @@
 * [Endpoints](#endpoints)  
 
 ### Introduction
-This is a Basic Python REST API for Premier League Stats (2022 - 2023 Season) as of 4/12/23. 
+This is a simple Python REST API for Premier League Stats (2022 - 2023 Season) as of 4/12/23. 
 
 Using BeautifulSoup, I scraped Premier League data from fbref.com. I then added the scraped data into a SQLAlchemy database that can be accessed or modified with 4 HTTP methods (GET, POST, PUT, DELETE). There are a total of 6 endpoints (3 GETS, 1 POST, 1 PUT, 1 DELETE). 
 
