@@ -11,7 +11,6 @@ Using BeautifulSoup, I scraped Premier League data from fbref.com. I then added 
 
 #### Directory Structure
 ```
-├── README.md          <- The README for users.
 ├── data
 │   ├── pl_table.csv       <- Premier League data scraped using BeautifulSoup.
 |
@@ -22,6 +21,7 @@ Using BeautifulSoup, I scraped Premier League data from fbref.com. I then added 
 ├── app.py             <- Flask Application root. 
 ├── create_database.py     <- Python script to add pl_table.csv to SQLAlchemy database.
 ├── data_scraper.py        <- Python script that uses BeautifulSoup to scrape Premier League data.
+├── README.md          <- The README for users.
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 ```
