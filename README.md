@@ -17,13 +17,13 @@ Using BeautifulSoup, I scraped Premier League data from fbref.com. I then added 
 ├── instance               <- Holds Flask configuration files.
 │   ├── teams_db.db        <- SQLAlchemy database for pl_table.csv.
 |
-├── .gitignore         <- Specifies intentionally untracked files that Git should ignore.
-├── app.py             <- Flask Application root. 
+├── .gitignore             <- Specifies intentionally untracked files that Git should ignore.
+├── app.py                 <- Flask Application root. 
 ├── create_database.py     <- Python script to add pl_table.csv to SQLAlchemy database.
 ├── data_scraper.py        <- Python script that uses BeautifulSoup to scrape Premier League data.
-├── README.md          <- The README for users.
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── README.md              <- The README for users.
+├── requirements.txt       <- The requirements file for reproducing the analysis environment, e.g.
+│                          generated with `pip freeze > requirements.txt`
 ```
 <b>Tools Used</b>: <i>Python, BeautifulSoup, Requests, Pandas, Flask, Flask-RESTful, Flask-SQLAlchemy</i>
 
